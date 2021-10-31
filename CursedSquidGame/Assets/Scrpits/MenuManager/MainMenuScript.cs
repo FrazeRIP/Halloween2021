@@ -9,6 +9,7 @@ public class MainMenuScript : MonoBehaviour
 
     public void PlayGame()
     {
+        GameManager.Instance.currentLevel = 1;
         SceneManager.LoadScene(scene); // Load Lv1 scene
     }
 
@@ -19,6 +20,7 @@ public class MainMenuScript : MonoBehaviour
 
     public void Retry()
     {
+        GameManager.Instance.currentLevel = 1;
         SceneManager.LoadScene(scene); // load current active scene
     }
 
@@ -26,4 +28,11 @@ public class MainMenuScript : MonoBehaviour
     {
         SceneManager.LoadScene("MainMenu"); // return to main menu
     }
+
+    public void NextLevel()
+    {
+
+        GameManager.Instance.currentLevel += 1; SceneManager.LoadScene(scene);
+    }
 }
+

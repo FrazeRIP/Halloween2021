@@ -16,6 +16,9 @@ public class AudioManager : MonoBehaviour
     [SerializeField] AudioClip[] _bgmClips;
     public AudioClip BGMClip { get { return _bgmClips[Random.Range(0, _bgmClips.Length)]; } }
 
+    [SerializeField] AudioClip[] _gunClips;
+    public AudioClip GunClip { get { return _gunClips[Random.Range(0, _gunClips.Length)]; } }
+
 
 
     #region Singleton

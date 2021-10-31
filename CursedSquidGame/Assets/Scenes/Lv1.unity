@@ -419,7 +419,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.526
+  m_Volume: 0.34
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -606,7 +606,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.595
+  m_Volume: 0.325
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1035,6 +1035,63 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 672896114}
   m_CullTransparentMesh: 1
+--- !u!1001 &683339279
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4182965086685967980, guid: 5014cb593107ed342ab314d10faca429, type: 3}
+      propertyPath: m_Name
+      value: GameManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 4182965086685967982, guid: 5014cb593107ed342ab314d10faca429, type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4182965086685967982, guid: 5014cb593107ed342ab314d10faca429, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 960
+      objectReference: {fileID: 0}
+    - target: {fileID: 4182965086685967982, guid: 5014cb593107ed342ab314d10faca429, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 540
+      objectReference: {fileID: 0}
+    - target: {fileID: 4182965086685967982, guid: 5014cb593107ed342ab314d10faca429, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4182965086685967982, guid: 5014cb593107ed342ab314d10faca429, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4182965086685967982, guid: 5014cb593107ed342ab314d10faca429, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4182965086685967982, guid: 5014cb593107ed342ab314d10faca429, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4182965086685967982, guid: 5014cb593107ed342ab314d10faca429, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4182965086685967982, guid: 5014cb593107ed342ab314d10faca429, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4182965086685967982, guid: 5014cb593107ed342ab314d10faca429, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4182965086685967982, guid: 5014cb593107ed342ab314d10faca429, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5014cb593107ed342ab314d10faca429, type: 3}
 --- !u!1 &727278449
 GameObject:
   m_ObjectHideFlags: 0
@@ -1289,7 +1346,6 @@ MonoBehaviour:
   - {fileID: 316731083}
   - {fileID: 341842108}
   blood: {fileID: 1926857730}
-  gunClip: {fileID: 8300000, guid: 8de7f98ed397f944ab45da1af571d854, type: 3}
   cd1: 0
   cd2: 0
 --- !u!82 &835163186
@@ -2922,74 +2978,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 857950285, guid: 72391cec05243f04280adc8c9988a76e, type: 3}
-      propertyPath: _hurtClips.Array.size
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 857950285, guid: 72391cec05243f04280adc8c9988a76e, type: 3}
-      propertyPath: _hurtClips.Array.data[0]
-      value: 
-      objectReference: {fileID: 8300000, guid: 50bf12b3caa88244c97a7dfcc9372844, type: 3}
-    - target: {fileID: 857950285, guid: 72391cec05243f04280adc8c9988a76e, type: 3}
-      propertyPath: _hurtClips.Array.data[1]
-      value: 
-      objectReference: {fileID: 8300000, guid: dbfd7c0a2f439064c84c11439302ad5e, type: 3}
-    - target: {fileID: 857950285, guid: 72391cec05243f04280adc8c9988a76e, type: 3}
-      propertyPath: _hurtClips.Array.data[2]
-      value: 
-      objectReference: {fileID: 8300000, guid: 5eeedf1c150cb5b4a83e2eb14f4a93a6, type: 3}
-    - target: {fileID: 857950285, guid: 72391cec05243f04280adc8c9988a76e, type: 3}
-      propertyPath: _hurtClips.Array.data[3]
-      value: 
-      objectReference: {fileID: 8300000, guid: 23e6f4679a4d74e4fbc61d79f80a1f50, type: 3}
-    - target: {fileID: 857950285, guid: 72391cec05243f04280adc8c9988a76e, type: 3}
-      propertyPath: _hurtClips.Array.data[4]
-      value: 
-      objectReference: {fileID: 8300000, guid: a4cec56b36d17df4aad9e0d6a2c0a974, type: 3}
-    - target: {fileID: 857950285, guid: 72391cec05243f04280adc8c9988a76e, type: 3}
-      propertyPath: _victoryClips.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 857950285, guid: 72391cec05243f04280adc8c9988a76e, type: 3}
-      propertyPath: _gameOverClips.Array.size
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 857950285, guid: 72391cec05243f04280adc8c9988a76e, type: 3}
-      propertyPath: _victoryClips.Array.data[0]
-      value: 
-      objectReference: {fileID: 8300000, guid: e64a584938e7e464fa489fbc856a04ed, type: 3}
-    - target: {fileID: 857950285, guid: 72391cec05243f04280adc8c9988a76e, type: 3}
-      propertyPath: _victoryClips.Array.data[1]
-      value: 
-      objectReference: {fileID: 8300000, guid: 8b8d9aee1752154479b0875b320b7191, type: 3}
-    - target: {fileID: 857950285, guid: 72391cec05243f04280adc8c9988a76e, type: 3}
-      propertyPath: _gameOverClips.Array.data[0]
-      value: 
-      objectReference: {fileID: 8300000, guid: 796582e4ee11ea246b175a277b1eaebd, type: 3}
-    - target: {fileID: 857950285, guid: 72391cec05243f04280adc8c9988a76e, type: 3}
-      propertyPath: _gameOverClips.Array.data[1]
-      value: 
-      objectReference: {fileID: 8300000, guid: d0b450e0430e3c548af3cdcc82d78470, type: 3}
-    - target: {fileID: 857950285, guid: 72391cec05243f04280adc8c9988a76e, type: 3}
-      propertyPath: _gameOverClips.Array.data[2]
-      value: 
-      objectReference: {fileID: 8300000, guid: 1a97f8724c9e8ba45a675121b6106649, type: 3}
-    - target: {fileID: 857950285, guid: 72391cec05243f04280adc8c9988a76e, type: 3}
-      propertyPath: _gameOverClips.Array.data[3]
-      value: 
-      objectReference: {fileID: 8300000, guid: e569b4fc66dbff8469526e8ee6dca8c7, type: 3}
-    - target: {fileID: 857950285, guid: 72391cec05243f04280adc8c9988a76e, type: 3}
-      propertyPath: _gameOverClips.Array.data[4]
-      value: 
-      objectReference: {fileID: 8300000, guid: d47184a4303ad0f4894d6b0e049a9663, type: 3}
-    - target: {fileID: 857950285, guid: 72391cec05243f04280adc8c9988a76e, type: 3}
-      propertyPath: _gameOverClips.Array.data[5]
-      value: 
-      objectReference: {fileID: 8300000, guid: a8d8f6917d7291b489bfdceddba2bdb2, type: 3}
-    - target: {fileID: 857950285, guid: 72391cec05243f04280adc8c9988a76e, type: 3}
-      propertyPath: _gameOverClips.Array.data[6]
-      value: 
-      objectReference: {fileID: 8300000, guid: 7d6a70459df064c40859ac5a51f891b4, type: 3}
     - target: {fileID: 3628599099454432226, guid: 72391cec05243f04280adc8c9988a76e, type: 3}
       propertyPath: m_Name
       value: AudioManager

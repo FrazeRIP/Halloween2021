@@ -5,49 +5,32 @@ using UnityEngine.UI;
 
 public class RetryMenu : MonoBehaviour
 {
+    [System.Serializable]
+    public class MemePair
+    {
+        public Sprite memeImage;
+        public AudioClip memeClip;
+    }
+
+    [SerializeField] MemePair[] memes;
+
     AudioSource m_AudioSource;
-    public AudioClip[] audioClips;
-
-    RawImage m_RawImage;
-    public Texture[] images;
-
-    int range;
-    int randomNum;
+    Image m_RawImage;
 
     void Start()
     {
-        if (audioClips.Length != images.Length)
-        {
-            if (audioClips.Length > images.Length) 
-            {
-                range = images.Length;
-            }
-            else
-            {
-                range = audioClips.Length;
-            }
-        }
-
-        randomNum = Random.Range(0, range);
-        
-        CallAudio(randomNum);
-        InvokeImage(randomNum);
-
-    }
-
-    public void CallAudio(int num)
-    {
         m_AudioSource = GetComponent<AudioSource>();
-        m_AudioSource.clip = audioClips[num];
+        //Fetch the RawImage component from the GameObject
+        m_RawImage = GetComponent<Image>();
+
+        DoUI(memes[Random.Range(0, memes.Length)]);
+
     }
 
-    public void InvokeImage(int num)
+    public void DoUI(MemePair pair)
     {
-
-        //Fetch the RawImage component from the GameObject
-        m_RawImage = GetComponent<RawImage>();
-        //Change the Texture to be the one define in the Inspector
-        m_RawImage.texture = images[num];
-
+        m_AudioSource.clip = pair.memeClip;
+        m_AudioSource.Play();
+        m_RawImage.sprite = pair.memeImage;
     }
 }

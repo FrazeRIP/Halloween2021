@@ -15,8 +15,6 @@ public class RobotScanner : MonoBehaviour
     [SerializeField] Sprite[] sprites;
     [SerializeField] GameObject[] guns;
     [SerializeField] GameObject blood;
-    [SerializeField] AudioClip gunClip;
-
     private static RobotScanner _instance;
 
     public static RobotScanner Instance { get { return _instance; } }
@@ -110,7 +108,7 @@ public class RobotScanner : MonoBehaviour
         if (cd<0 && Random.Range(0, 1.0f) < 0.0025f)
         {
             gun.GetComponent<Image>().color = Color.white;
-            gun.GetComponent<AudioSource>().PlayOneShot(gunClip);
+            gun.GetComponent<AudioSource>().PlayOneShot(AudioManager.Instance.GunClip);
             gun.GetComponent<AudioSource>().PlayOneShot(AudioManager.Instance.HurtClip);
             cd = Random.Range(1f, 3f);
         }
@@ -121,7 +119,7 @@ public class RobotScanner : MonoBehaviour
     {
         //blood.GetComponent<Image>().color = new Color(Color.red.r, Color.red.g, Color.red.b, 0);
         blood.GetComponent<SimpleFadeOut>().enabled = true;
-        blood.GetComponent<AudioSource>().PlayOneShot(gunClip);
+        blood.GetComponent<AudioSource>().PlayOneShot(AudioManager.Instance.GunClip);
         blood.GetComponent<AudioSource>().PlayOneShot(AudioManager.Instance.HurtClip);
     }
 }
