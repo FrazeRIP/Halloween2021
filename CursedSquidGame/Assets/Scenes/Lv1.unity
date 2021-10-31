@@ -2978,6 +2978,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 857950285, guid: 72391cec05243f04280adc8c9988a76e, type: 3}
+      propertyPath: _gunClips.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 857950285, guid: 72391cec05243f04280adc8c9988a76e, type: 3}
+      propertyPath: _hurtClips.Array.size
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 857950285, guid: 72391cec05243f04280adc8c9988a76e, type: 3}
+      propertyPath: _gunClips.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: 1f557f2c2eebfa545884b6284ab7c1ab, type: 3}
+    - target: {fileID: 857950285, guid: 72391cec05243f04280adc8c9988a76e, type: 3}
+      propertyPath: _hurtClips.Array.data[7]
+      value: 
+      objectReference: {fileID: 8300000, guid: b401a1037be495a4f8ec6028fbc6b9e7, type: 3}
+    - target: {fileID: 857950285, guid: 72391cec05243f04280adc8c9988a76e, type: 3}
+      propertyPath: _hurtClips.Array.data[8]
+      value: 
+      objectReference: {fileID: 8300000, guid: 78446ad37f1b1f8498cc5abf98c3546f, type: 3}
     - target: {fileID: 3628599099454432226, guid: 72391cec05243f04280adc8c9988a76e, type: 3}
       propertyPath: m_Name
       value: AudioManager
