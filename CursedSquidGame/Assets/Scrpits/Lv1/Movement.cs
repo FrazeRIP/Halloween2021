@@ -6,18 +6,14 @@ using UnityEngine.UI;
 public class Movement : MonoBehaviour
 {
 
-
-
     public Camera mainCamera;
-
-
-
 
     [SerializeField] Image indicator;
     [SerializeField] Slider slider;
     [SerializeField] Animator camAnim;
 
     [SerializeField] float moveSpeed = 1.0f;
+
 
 
     [Header("Debug")]
@@ -58,8 +54,9 @@ public class Movement : MonoBehaviour
     {
         ChangeIndicator();
 
-        if (mainCamera.orthographicSize>=1 &&Input.GetKey(KeyCode.Space))
+        if (mainCamera.orthographicSize>1 &&Input.GetKey(KeyCode.Space))
         {
+            SimpleSceneSwitch.Instance.sceneName = "GameOver";
             if (canMove)
             {
                 camAnim.Play("camMovement");
@@ -68,8 +65,14 @@ public class Movement : MonoBehaviour
             else
             {
                 Debug.Log("You already dead.");
-                Destroy(gameObject);
+                Dead();
             }
+        }
+        
+        if(mainCamera.orthographicSize <= 1)
+        {
+            SimpleSceneSwitch.Instance.sceneName = "Victory";
+            SimpleSceneSwitch.Instance.ChangeScene();
         }
 
         ChangeProgress();
@@ -97,5 +100,13 @@ public class Movement : MonoBehaviour
     void ChangeProgress()
     {
         slider.value = 1 / mainCamera.orthographicSize;
+    }
+
+
+    public void Dead()
+    {
+        camAnim.Play("camDead");
+        RobotScanner.Instance.Dead();
+        Destroy(gameObject);
     }
 }

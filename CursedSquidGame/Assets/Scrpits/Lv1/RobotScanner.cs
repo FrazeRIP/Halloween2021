@@ -14,6 +14,7 @@ public class RobotScanner : MonoBehaviour
     [SerializeField] VideoClip[] videos;
     [SerializeField] Sprite[] sprites;
     [SerializeField] GameObject[] guns;
+    [SerializeField] GameObject blood;
     [SerializeField] AudioClip gunClip;
 
     private static RobotScanner _instance;
@@ -116,5 +117,11 @@ public class RobotScanner : MonoBehaviour
 
     }
 
-
+    public void Dead()
+    {
+        //blood.GetComponent<Image>().color = new Color(Color.red.r, Color.red.g, Color.red.b, 0);
+        blood.GetComponent<SimpleFadeOut>().enabled = true;
+        blood.GetComponent<AudioSource>().PlayOneShot(gunClip);
+        blood.GetComponent<AudioSource>().PlayOneShot(AudioManager.Instance.HurtClip);
+    }
 }
