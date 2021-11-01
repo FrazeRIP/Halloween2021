@@ -3159,5 +3159,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: JumpScares
       objectReference: {fileID: 0}
+    - target: {fileID: 6662347722406698650, guid: 149f4efe697776c47a9571659c96465b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 149f4efe697776c47a9571659c96465b, type: 3}
