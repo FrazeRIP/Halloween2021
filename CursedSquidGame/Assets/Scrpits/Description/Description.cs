@@ -21,7 +21,7 @@ public class Description : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (GameManager.Instance.currentLevel<=1&& Input.GetKeyDown(KeyCode.Space))
         {
             SSS.sceneName = "Lv" + GameManager.Instance.currentLevel;
             SSS.ChangeScene();

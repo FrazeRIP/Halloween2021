@@ -72,5 +72,4 @@ MonoBehaviour:
   _gunClips:
   - {fileID: 8300000, guid: 8de7f98ed397f944ab45da1af571d854, type: 3}
   - {fileID: 8300000, guid: dd6663b323d61ab4eabe9f7e3e951708, type: 3}
-  - {fileID: 8300000, guid: 56d96ec2022594f47b74ce185e884d8b, type: 3}
   - {fileID: 8300000, guid: d1bd3026dffb4be47b8f33ab9d9e49bb, type: 3}

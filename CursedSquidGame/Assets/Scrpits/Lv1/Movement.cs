@@ -11,13 +11,15 @@ public class Movement : MonoBehaviour
     [SerializeField] Image indicator;
     [SerializeField] Slider slider;
     [SerializeField] Animator camAnim;
-
+    [SerializeField] Text timer;
     [SerializeField] float moveSpeed = 1.0f;
 
 
 
     [Header("Debug")]
     public bool canMove;
+
+    public float timeRemaining = 105f;
 
     float _initialZoom;
     public float InitialZoom { get { return _initialZoom; } }
@@ -68,14 +70,15 @@ public class Movement : MonoBehaviour
                 Dead();
             }
         }
-        
-        if(mainCamera.orthographicSize <= 1)
+
+        if (mainCamera.orthographicSize <= 1 || Input.GetKeyDown(KeyCode.Alpha0))
         {
             SimpleSceneSwitch.Instance.sceneName = "Victory";
             SimpleSceneSwitch.Instance.ChangeScene();
         }
 
         ChangeProgress();
+        Timer();
     }
 
     void ChangeIndicator()
@@ -108,5 +111,21 @@ public class Movement : MonoBehaviour
         camAnim.Play("camDead");
         RobotScanner.Instance.Dead();
         Destroy(gameObject);
+    }
+
+
+    void Timer()
+    {
+        if (timeRemaining > 0)
+        {
+            timeRemaining -= Time.deltaTime;
+            float minutes = Mathf.FloorToInt(timeRemaining / 60);
+            float seconds = Mathf.FloorToInt(timeRemaining % 60);
+            timer.text = minutes + ":" + seconds;
+        }
+        else
+        {
+            Dead();
+        }
     }
 }

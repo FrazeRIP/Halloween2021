@@ -25,6 +25,10 @@ public class RobotScanner : MonoBehaviour
     [SerializeField] float cd1 = 0;
     [SerializeField] float cd2 = 0;
 
+    [Header("JumpScares")]
+    [SerializeField] float generateChance;
+    [SerializeField] int totalNumExist;
+
     private void Awake()
     {
         if (_instance != null && _instance != this)
@@ -54,6 +58,11 @@ public class RobotScanner : MonoBehaviour
             GunDetect(guns[0], ref cd1);
             GunDetect(guns[1], ref cd2);
         }
+
+        if (JumpScare.totalJumpScareOnScreen<totalNumExist&&Random.Range(0, 1f) <= generateChance)
+        {
+            JumpScareGenerator.Instance.GenerateJumpScare();
+        }
     }
 
 
@@ -67,14 +76,17 @@ public class RobotScanner : MonoBehaviour
         if (progress >= .8)
         {
             PlayAndCountdown(Random.Range(0, 3));
+            totalNumExist = 2;
         }
         else if (progress >= .6)
         {
             PlayAndCountdown(Random.Range(2, 5));
+            totalNumExist = 3;
         }
         else
         {
             PlayAndCountdown(Random.Range(4, 7));
+            totalNumExist = 4;
         }
     }
 
@@ -105,7 +117,7 @@ public class RobotScanner : MonoBehaviour
 
     void GunDetect(GameObject gun, ref float cd)
     {
-        if (cd<0 && Random.Range(0, 1.0f) < 0.0025f)
+        if (cd<0 && Random.Range(0, 1.0f) < generateChance)
         {
             gun.GetComponent<Image>().color = Color.white;
             gun.GetComponent<AudioSource>().PlayOneShot(AudioManager.Instance.GunClip);

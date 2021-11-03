@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Video;
 
 public class AudioManager : MonoBehaviour
 {
@@ -18,6 +19,7 @@ public class AudioManager : MonoBehaviour
 
     [SerializeField] AudioClip[] _gunClips;
     public AudioClip GunClip { get { return _gunClips[Random.Range(0, _gunClips.Length)]; } }
+
 
 
 
